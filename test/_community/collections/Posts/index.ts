@@ -6,6 +6,16 @@ export const postsSlug = 'posts'
 
 export const PostsCollection: CollectionConfig = {
   slug: postsSlug,
+  versions: {
+    drafts: {
+      autosave: {
+        showSaveDraftButton: true,
+        interval: 15_000,
+      },
+      schedulePublish: true,
+    },
+    maxPerDoc: 50,
+  },
   admin: {
     useAsTitle: 'title',
     enableListViewSelectAPI: true,
